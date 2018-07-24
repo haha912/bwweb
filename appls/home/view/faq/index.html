@@ -1,0 +1,141 @@
+{layout name="layout" /}
+<!-- header end -->
+
+<!-- page-intro start-->
+<!-- ================ -->
+<div class="page-intro">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<ol class="breadcrumb">
+					<li><i class="fa fa-home pr-10"></i><a href="index.html">Home</a></li>
+					<li class="active">{:ldf('常见问题','FAQ')}</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- page-intro end -->
+
+<!-- main-container start -->
+<!-- ================ -->
+<section class="main-container">
+
+	<div class="container">
+		<div class="row">
+
+			<!-- sidebar start -->
+			<aside class="col-md-3">
+				<div class="sidebar">
+					<div class="block clearfix">
+						<h3 class="title">{:ldf('提交问题','Submit Question')}</h3>
+						<div class="separator"></div>
+						<div class="alert alert-success hidden" id="MessageSent3">
+							<!--We have received your message, we will contact you very soon.-->
+							{:ldf('您的问题成功发送，我们会尽快处理，请关注邮箱信息，谢谢您的支持！','Message sent successfully')}
+						</div>
+						<div class="alert alert-danger hidden" id="MessageNotSent3">
+							{:ldf('Oops! 出现了一些问题问题，请刷新后重试.','Oops! There is something wrong, please refresh and try again.')}
+						</div>
+                   
+						<form name="form" id="sidebar-form"  method="post">
+							<div class="form-group has-feedback">
+								<label for="name3">{:ldf('姓名','Name')}</label>
+								<input type="text" class="form-control" id="name3" placeholder="{:ldf('请输入您的姓名','Enter you name') }" name="name3" autocomplete='name'>
+								<i class="fa fa-user form-control-feedback"></i>
+							</div>
+							<div class="form-group has-feedback">
+								<label for="email3">Email</label>
+								<input type="email" class="form-control" id="email3" placeholder="{:ldf('请输入您的 email','Enter you email')}" name="email3" autocomplete='email'>
+								<i class="fa fa-envelope form-control-feedback"></i>
+							</div>
+							<div class="form-group">
+								<label>{:ldf('分类','Subject')}</label>
+								<select class="form-control" name = 'subject' id="category">
+									<option value="bwc">{:ldf('舌尖美食链','BITEOFWORLD')}</option>
+									<option value="product">{:ldf('产品','Product')}</option>
+									<option value="support">{:ldf('支持','Support')}</option>
+									<option value="other">{:ldf('其他','Others')}</option>
+								</select>
+							</div>
+							<div class="form-group has-feedback">
+								<label for="message3">{:ldf('问题','Question')}</label>
+								<textarea class="form-control" rows="4" id="message3" placeholder="" name="message3"></textarea>
+								<i class="fa fa-pencil form-control-feedback"></i>
+							</div>
+							<div class="form-group has-feedback capt">
+								<label for="verifyCode">{:ldf('验证码','Captcha')}</label>
+								<input type="text" name="verifyCode"  id="verifyCode" class="form-control" placeholder="{:ldf('请输入验证码','Enter captcha')}">
+								<div style = 'margin-top:5px;'>{:captcha_img()}</div>
+							</div>
+							<input type="hidden" name="__token__" value="{$Request.token}" />
+							<input type="submit" value="{:ldf('提交','Submit')}"  id = 'subtn' class="submit-button btn btn-default">
+							<a href="/faq.html" id = "another-ques" class="btn btn-default hidden">{:ldf('继续提问','Continue')}</a>
+							<p id = 'captcha-error' style = 'color:red;visibility:hidden;'>{:ldf('验证码错误,请点击图片进行刷新','Captcha error, please click the picture to refresh it.')}</p>
+						</form>
+					</div>
+				</div>
+			</aside>
+			<!-- sidebar end -->
+
+			<!-- main start -->
+			<!-- ================ -->
+			<div class="main col-md-9">
+
+				<!-- page-title start -->
+				<!-- ================ -->
+				<h1 class="page-title">{:ldf('常见问题','FAQ')}</h1>
+				<p>{:ldf('查看常见问题或者通过左侧窗口进行提问，我们会尽快给您答复。','View common questions or ask questions in the left window,We will give you a reply as soon as possible.')}</p>
+				<!-- page-title end -->
+
+				<!-- tabs start -->
+				<div class="tabs-style-2">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+
+						{foreach $data as $ss => $slabel} 
+							<li {if $ss == 1} class="active" {/if}><a href = "<?php echo '#tab'.$ss; ?>"  role="tab" data-toggle="tab"><i class="fa  fa-life-saver pr-10"></i>{:ldf($slabel['label'],$slabel['label_en'])}</a></li>
+						{/foreach}
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						{foreach $data as $ss => $slabel} 
+							<div class="tab-pane fade in {if $ss == 1} active {/if}" id="<?php echo 'tab'.$ss; ?>">
+								<!-- accordion start -->
+								<div class="panel-group" id="accordion-faq">
+
+									{foreach $list[$slabel['type']] as $ol} 
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="panel-title">
+														<a data-toggle="collapse" data-parent="#accordion-faq" href="<?php echo '#accordion'.$ol['id']; ?>" class="collapsed">
+															<i class="fa fa-question-circle pr-10"></i> {:ldf($ol['question'],$ol['question_en'])}
+														</a>
+													</h4>
+												</div>
+												<div id="<?php echo 'accordion'.$ol['id']; ?>" class="panel-collapse collapse">
+													<div class="panel-body">
+														{$ol['answer']}
+													</div>
+												</div>
+											</div>
+									{/foreach}
+									{if !count($list[$slabel['type']])}
+										<div class="panel-group" id="accordion-faq-2">
+											{:ldf('目前还没有提问!','There is no question yet.')}
+										</div>
+									{/if}
+								</div>
+								<!-- accordion end -->
+							</div>
+						{/foreach}
+					</div>
+				</div>
+				<!-- tabs end -->
+			</div>
+			<!-- main end -->
+
+		</div>
+	</div>
+</section>
+<!-- main-container end -->

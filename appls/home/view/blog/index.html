@@ -1,0 +1,137 @@
+{layout name="layout" /}
+
+<!-- page-intro start-->
+<!-- ================ -->
+<div class="page-intro">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<ol class="breadcrumb">
+					<li><i class="fa fa-home pr-10"></i><a href="/">Home</a></li>
+					<li class="active">{:ldf('动态','Blogs')}</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- page-intro end -->
+
+<!-- main-container start -->
+<!-- ================ -->
+<section class="main-container">
+
+	<div class="container">
+		<div class="row">
+
+			<!-- sidebar start -->
+			<aside class="col-md-3">
+				<div class="sidebar">
+					<div class="block clearfix">
+						<h3 class="title">menu</h3>
+						<div class="separator"></div>
+						<nav>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="/">Home</a></li>
+								<li><a href="/#welcomeBW">{:ldf('关于我们','About us')}</a></li>
+								<li class="active"><a href="/blog.html">{:ldf('动态','Blogs')}</a></li>
+								<li><a href="/faq.html">FAQ</a></li>
+								<li><a href="page-contact.html">{:ldf('联系我们','Contact us')}</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="block clearfix">
+						<h3 class="title">{:ldf('标签','Labels')}</h3>
+						<div class="separator"></div>
+						<div class="tags-cloud">
+							<div class="tag">
+								<a href="#">BWC</a>
+							</div>
+							<div class="tag">
+								<a href="#">{:ldf('舌尖美食链','BITROFWORLD')}</a>
+							</div>
+						</div>
+					</div>
+					<div class="block clearfix">
+						<form role="search">
+							<div class="form-group has-feedback">
+								<input type="text" class="form-control" placeholder="{:ldf('搜索','Search')}">
+								<i class="fa fa-search form-control-feedback"></i>
+							</div>
+						</form>
+					</div>
+				</div>
+			</aside>
+			<!-- sidebar end -->
+
+			<!-- main start -->
+			<!-- ================ -->
+			<div class="main col-md-8 col-md-offset-1">
+
+				<!-- page-title start -->
+				<!-- ================ -->
+				<h1 class="page-title">{:ldf('新闻动态','News')}</h1>
+				<div class="separator-2"></div>
+				<p class="lead">{:ldf('欢迎关注官网，即使获取最新动态。','Welcome to BITEOFWORLD, please subscribe for more information.')}</p>
+				<!-- page-title end -->
+
+				{foreach $list as $bl} 
+					<!-- blogpost start -->
+					<article class="clearfix blogpost object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="200">
+						<div class="overlay-container">
+							<img src="<?php echo str_replace('_thumb', '',$bl['cover']); ?>" alt="">
+							<div class="overlay">
+								<div class="overlay-links">
+									<a href="{:url('/home/blog/'.'blogpost/id/'.$bl['id'])}"><i class="fa fa-link"></i></a>
+									<a href="<?php echo str_replace('_thumb', '',$bl['cover']); ?>" class="popup-img-single" title="image title"><i class="fa fa-search-plus"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="blogpost-body">
+							<div class="post-info">
+								<span class="day"><?php $tsplit = explode("-",$bl['time']); echo $tsplit[2]; ?></span>
+								<?php  $mlist = array('JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUNE', 'JULY', 'AUG', 'SEPT', 'OCT', 'NOV', 'DEC'); ?>
+								<span class="month">{$mlist[(int)$tsplit[1]-1]} {$tsplit[0]}</span>
+							</div>
+							<div class="blogpost-content">
+								<header>
+									<h2 class="title"><a href="{:url('/home/blog/'.'blogpost/id/'.$bl['id'])}">{:ldf($bl['title'],$bl['title_en'])}</a></h2>
+									<div class="submitted"><i class="fa fa-user pr-5"></i> by <a href="#">{$bl['author']}</a></div>
+								</header>
+								<p>{:ldf($bl['intro'],$bl['intro_en'])}</p>
+							</div>
+						</div>
+						<footer class="clearfix">
+							<ul class="links pull-left">
+								<!--<li><i class="fa fa-comment-o pr-5"></i> <a href="#">0 comments</a> |</li> -->
+								<?php $lsplit = explode("+",$bl['labels']); $lsplit_en = explode("+",$bl['labels_en']); ?>
+								<li><i class="fa fa-tags pr-5"></i> 
+									<?php if (!strcmp(\think\Session::get('lang'),'ch')){?>
+										{foreach $lsplit_en as $lo} <a href="#">{$lo}. </a> {/foreach} 
+									<?php }else{ ?>
+										{foreach $lsplit as $lo} <a href="#">{$lo}. </a> {/foreach} 
+									<?php } ?>
+								</li>
+							</ul>
+							<a class="pull-right link" href="{:url('/home/blog/'.'blogpost/id/'.$bl['id'])}"><span>Read more</span></a>
+						</footer>
+					</article>
+					<!-- blogpost end -->
+				{/foreach}
+				
+
+				<!-- pagination start -->
+				<ul class="pagination">
+					<li><a href="#">«</a></li>
+					<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+					<!--<li><a href="#">2</a></li>-->
+					<li><a href="#">»</a></li>
+				</ul>
+				<!-- pagination end -->
+
+			</div>
+			<!-- main end -->
+
+		</div>
+	</div>
+</section>
+<!-- main-container end -->

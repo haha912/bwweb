@@ -1,0 +1,147 @@
+{layout name="layout" /}
+
+<!-- banner start -->
+<!-- ================ -->
+<div class="banner">
+	<div class="fixed-image dark-translucent-bg section" style="background-image:url('__PUBLIC__/images/page-contact-banner.jpg');">
+		<div class="container">
+			<div class="space"></div>
+			<h1>Get in Touch</h1>
+			<div class="separator-2"></div>
+			<p class="lead">{:ldf('如您有任何问题，可以致电我们或通过以下表格联系我们','If you have any questions, please call us or contact us through the following form')}<br>
+			{:ldf('我们会尽快给您回复，感谢您关注舌尖美食链。','We will reply to you as soon as possible. Thank you for your attention to us.')}</p>
+		</div>
+	</div>
+</div>
+<!-- banner end -->
+
+<!-- page-intro start-->
+<!-- ================ -->
+<div class="page-intro">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<ol class="breadcrumb">
+					<li><i class="fa fa-home pr-10"></i><a href="/">Home</a></li>
+					<li class="active">{:ldf('联系我们','Contact us')}</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- page-intro end -->
+
+<!-- main-container start -->
+<!-- ================ -->
+<section class="main-container">
+
+	<div class="container">
+		<div class="row">
+
+			<!-- main start -->
+			<!-- ================ -->
+			<div class="main col-md-12">
+
+				<!-- page-title start -->
+				<!-- ================ -->
+				<h1 class="page-title">Contact Us</h1>
+				<!-- page-title end -->
+				<div class="row">
+					<div class="col-md-8">
+						<div class="alert alert-success hidden" id="MessageSent">
+							{:ldf('您的问题成功发送，我们会尽快处理，请关注邮箱信息，谢谢您的支持！','Message sent successfully')}
+						</div>
+						<div class="alert alert-danger hidden" id="MessageNotSent">
+							{:ldf('Oops! 出现了一些问题问题，请刷新后重试.','Oops! There is something wrong, please refresh and try again.')}
+						</div>
+						<div class="contact-form">
+							<form id="contact-form" role="form">
+								<div class="form-group has-feedback">
+									<label for="name">{:ldf('姓名*','name*')}</label>
+									<input type="text" class="form-control" id="name" name="name" placeholder="" autocomplete='name'>
+									<i class="fa fa-user form-control-feedback"></i>
+								</div>
+								<div class="form-group has-feedback">
+									<label for="email">Email*</label>
+									<input type="email" class="form-control" id="email" name="email" placeholder="" autocomplete='email'>
+									<i class="fa fa-envelope form-control-feedback"></i>
+								</div>
+								<div class="form-group has-feedback">
+									<label for="subject">{:ldf('主题*','Title*')}</label>
+									<input type="text" class="form-control" id="subject" name="subject" placeholder="">
+								</div>
+								<div class="form-group has-feedback">
+									<label for="message">{:ldf('详细信息*','Message')}</label>
+									<textarea class="form-control" rows="6" id="message" name="message" placeholder=""></textarea>
+									<i class="fa fa-pencil form-control-feedback"></i>
+								</div>
+								<div class="form-group has-feedback capt">
+									<label for="verifyCode">{:ldf('验证码','Captcha')}</label>
+									<input type="text" name="verifyCode"  id="verifyCode" class="form-control" placeholder="{:ldf('请输入验证码','Enter captcha')}">
+									<div style = 'margin-top:5px;'>{:captcha_img()}</div>
+								</div>
+								<input type="hidden" name="__token__" value="{$Request.token}" />
+								<input type="submit" value="{:ldf('提交','Submit')}"  id = 'subtn' class="submit-button btn btn-default">
+								<a href="/faq.html" id = "another-ques" class="btn btn-default hidden">{:ldf('继续提问','Continue')}</a>
+								<p id = 'captcha-error' style = 'color:red;visibility:hidden;'>{:ldf('验证码错误,请点击图片进行刷新','Captcha error, please click the picture to refresh it.')}</p>
+							</form>
+						</div>
+					</div>
+					<!-- sidebar start -->
+					<aside class="col-md-4">
+						<div class="sidebar">
+							<div class="side vertical-divider-left">
+								<h3 class="title">BITE OF WORLD.</h3>
+								<ul class="list">
+									<li><strong></strong></li>
+									<li><i class="fa fa-home pr-10"></i><?php echo $info['address']; ?></li>
+									<li><i class="fa fa-phone pr-10"></i><?php echo $info['cellphone']; ?></li>
+									<li><i class="fa fa-mobile pr-10"></i><?php echo $info['telephone']; ?></li>
+									<li><i class="fa fa-envelope pr-10"></i><a href="mailto:<?php echo $info['email']; ?>"><?php echo $info['email']; ?></a></li>
+									<li><i id = 'welogo' class="fa fa-weixin pr-10" onmouseover = "$('#wechatimg').css('visibility','visible');$('#welogo').css('color','#009798');" onmouseout = "$('#wechatimg').css('visibility','hidden');$('#welogo').css('color','rgb(102, 102, 102)');"></i>
+										 <a href="tencent://message/?uin={$info['qqnum']}&Site=&Menu=yes"><i id = 'qqlogo' class="fa fa-qq pr-10" onmouseover = "$('#qqlogo').css('color','#009798')" onmouseout = "$('#qqlogo').css('color','rgb(102, 102, 102)')" style = 'color:rgb(102, 102, 102)'></i></a>
+									</li>
+									<li id = 'wechatimg' style = 'visibility:hidden;'> <img id="logo" src={$info['wechat']} alt="BW"></li>
+								</ul>
+								<!--
+								<ul class="social-links colored circle large">
+									<li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+									<li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+									<li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+								</ul>
+								-->
+							</div>
+						</div>
+					</aside>
+					<!-- sidebar end -->
+				</div>
+			</div>
+			<!-- main end -->		
+		</div>
+	</div>
+</section>
+<!-- main-container end -->
+
+<!-- section start -->
+<!-- ================ -->
+<div class="section parallax dark-translucent-bg parallax-bg-2">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8">
+				<h2 class="title">{:ldf('订阅舌尖*','Subscribe')}</h2>
+				<p class="lead">{:ldf('谢谢您对舌尖美食链的支持，留下您的邮箱<br>我们将会及时将最新动态推送给您。','Welcome to BITEOFWORLD, please subscribe for more information.')}</p>
+				<form class="margin-bottom-clear form-inline" id = 'inline-form'>
+					<div class="form-group has-feedback">
+						<label class="sr-only" for="subscribe">Email address</label>
+						<input type="email" class="form-control" id="subscribe" placeholder="Enter email" name="subscribe" required>
+						<i class="fa fa-envelope form-control-feedback"></i>
+					</div>
+					<input type="hidden" name="__token__" value="{$Request.token}" />
+					<input type="submit" value="{:ldf('提交','Sbumit')}" class="submit-button btn btn-default" id = "sub-utton">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- section end -->
+			

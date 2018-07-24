@@ -1,0 +1,177 @@
+---------------------------------------------------------------
+[ 2018-04-28T00:48:54+08:00 ] 66.249.73.17 GET /
+[ info ] www.shitangba.com/ [运行时间：0.019661s][吞吐率：50.86req/s] [内存消耗：2,065.83kb] [文件加载：40]
+[ info ] [ LANG ] /home/wwwroot/stbweb/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.shitangba.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'from' => 'googlebot(at)googlebot.com',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'accept-encoding' => 'gzip,deflate,br',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ /home/wwwroot/stbweb/appls/home/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/stbweb/public/../appls/home/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-28T04:18:58+08:00 ] 106.11.225.249 GET /
+[ info ] shitangba.com/ [运行时间：0.019740s][吞吐率：50.66req/s] [内存消耗：2,065.48kb] [文件加载：40]
+[ info ] [ LANG ] /home/wwwroot/stbweb/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'user-agent' => 'Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'host' => 'shitangba.com',
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'connection' => 'keep-alive',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ /home/wwwroot/stbweb/appls/home/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/stbweb/public/../appls/home/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-28T04:25:15+08:00 ] 47.98.60.52 GET /
+[ info ] shitangba.com/ [运行时间：0.020361s][吞吐率：49.11req/s] [内存消耗：2,064.91kb] [文件加载：40]
+[ info ] [ LANG ] /home/wwwroot/stbweb/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+  'host' => 'shitangba.com',
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'connection' => 'keep-alive',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ /home/wwwroot/stbweb/appls/home/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/stbweb/public/../appls/home/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-28T12:43:09+08:00 ] 106.14.114.244 GET /
+[ info ] shitangba.com/ [运行时间：0.020897s][吞吐率：47.85req/s] [内存消耗：2,064.91kb] [文件加载：40]
+[ info ] [ LANG ] /home/wwwroot/stbweb/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+  'host' => 'shitangba.com',
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'connection' => 'keep-alive',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ /home/wwwroot/stbweb/appls/home/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/stbweb/public/../appls/home/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-28T16:09:36+08:00 ] 64.246.161.190 GET /
+[ info ] www.shitangba.com/ [运行时间：0.019540s][吞吐率：51.18req/s] [内存消耗：2,066.13kb] [文件加载：40]
+[ info ] [ LANG ] /home/wwwroot/stbweb/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'te' => 'deflate,gzip;q=0.3',
+  'connection' => 'close, TE',
+  'pragma' => 'no-cache',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, x-gzip, deflate',
+  'accept-language' => 'en-us,fr-be;q=0.5',
+  'from' => 'feedback@surveybot.com',
+  'host' => 'www.shitangba.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:59.0) Gecko/20100101 Firefox/59.0',
+  'wshost' => 'www.shitangba.com',
+  'wsip' => '101.132.132.76',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ /home/wwwroot/stbweb/appls/home/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/stbweb/public/../appls/home/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-28T16:48:26+08:00 ] 106.11.226.90 GET /
+[ info ] www.shitangba.com/ [运行时间：0.020414s][吞吐率：48.99req/s] [内存消耗：2,065.99kb] [文件加载：40]
+[ info ] [ LANG ] /home/wwwroot/stbweb/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'user-agent' => 'Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'host' => 'www.shitangba.com',
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'connection' => 'keep-alive',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ /home/wwwroot/stbweb/appls/home/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/stbweb/public/../appls/home/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File

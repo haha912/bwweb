@@ -1,0 +1,93 @@
+<!-- =================================================
+================= CONTROLS Content ===================
+================================================== -->
+<div id="controls">
+
+    <!-- ================================================
+    ================= SIDEBAR Content ===================
+    ================================================= -->
+    <aside id="sidebar">
+
+
+        <div id="sidebar-wrap">
+
+            <div class="panel-group slim-scroll" role="tablist">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#sidebarNav">
+                                BITEOFWORLD <i class="fa fa-angle-up"></i>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="sidebarNav" class="panel-collapse collapse in" role="tabpanel">
+                        <div class="panel-body">
+                            <script  type="text/javascript">
+                                $(window).on('load',function(){
+                                    var moduleUrl = '{$data.module_slug ? $data.module_slug : "admin"}';
+                                    
+                                    if(moduleUrl){
+                                        var currentMenuItem = $('#navigation .'+moduleUrl);
+                                        if(currentMenuItem.hasClass('dropdown')){
+                                            currentMenuItem.addClass('open');
+                                            currentMenuItem.find('ul').show();
+
+                                        }else{
+                                            currentMenuItem.addClass('active');
+                                        }
+                                    }
+                                });
+                            </script>
+                            <!-- ===================================================
+                            ================= NAVIGATION Content ===================
+                            ==================================================== -->
+                            <ul id="navigation">
+                                <li class="manage"><a class="ajax-link" href="{:url('/admin')}"><i class="fa fa-home" aria-hidden="true"></i>
+                					起始页</a>
+                				</li>
+                                <li class="administrator">
+                                    <a role="button" tabindex="0"><i class="fa fa-user-secret" aria-hidden="true"></i> <span>管理员</span></a>
+                                    <ul>
+                                        <li><a class="ajax-link" href="{:url('/admin/administrator')}"><i class="fa fa-caret-right" aria-hidden="true"></i>管理员列表</a></li>
+                                        <li><a class="ajax-link" href="{:url('/admin/administrator/create')}"><i class="fa fa-caret-right"></i>新增管理员</a></li>
+                                    </ul>
+                                </li>
+                                <li class="baseinfomanage">
+                                    <a role="button" tabindex="0"><i class="fa fa-info" aria-hidden="true"></i> <span>基础信息</span></a>
+                                    <ul>
+                                        <li><a class="ajax-link" href="{:url('/admin/baseinfomanage')}"><i class="fa fa-caret-right" aria-hidden="true"></i>联系方式</a></li>
+                                        <li><a class="ajax-link" href="{:url('/admin/baseinfomanage/pictxtmng')}"><i class="fa fa-caret-right"></i>图文管理</a></li>
+                                        <li><a class="ajax-link" href="{:url('/admin/teammanage')}"><i class="fa fa-caret-right"></i>成员管理</a></li>
+                                        <li><a class="ajax-link" href="{:url('/admin/baseinfomanage/whitepaper')}"><i class="fa fa-caret-right"></i>白皮书</a></li>                                       
+                                    </ul>
+                                </li>
+                                <li class="usermanage">
+                                    <a role="button" tabindex="0"><i class="fa fa-user" aria-hidden="true"></i> <span>用户管理</span></a>
+                                    <ul>
+                                        <li><a class="ajax-link" href="{:url('/admin/usermanage')}"><i class="fa fa-caret-right" aria-hidden="true"></i>联系我们</a></li>
+                                        <li><a class="ajax-link" href="{:url('/admin/usermanage/faqmng')}"><i class="fa fa-caret-right"></i>FAQ</a></li>
+										<li><a class="ajax-link" href="{:url('/admin/usermanage/subscribemng')}"><i class="fa fa-caret-right"></i>订阅</a></li>
+                                    </ul>
+                                </li>
+                                <li class="blogmng">
+                                    <a role="button" tabindex="0"><i class="fa fa-list" aria-hidden="true"></i> <span>文章管理</span></a>
+                                    <ul>
+                                        <li><a class="ajax-link" href="{:url('/admin/blogmng')}"><i class="fa fa-caret-right" aria-hidden="true"></i>文章列表</a></li>
+                                        <li><a class="ajax-link" href="{:url('/admin/blogmng/create')}"><i class="fa fa-caret-right"></i>新增文章</a></li>
+                                    </ul>
+                                </li>                                
+                            </ul>
+                            <!--/ NAVIGATION Content -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </aside>
+    <!--/ SIDEBAR Content -->
+
+</div>
+<!--/ CONTROLS Content -->

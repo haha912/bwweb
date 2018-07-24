@@ -1,0 +1,198 @@
+---------------------------------------------------------------
+[ 2018-06-02T21:07:15+08:00 ] 0.0.0.0 GET /
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004792s ] mysql:host=127.0.0.1;dbname=biteofworld;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_visitinfo` [ RunTime:0.019401s ]
+[ sql ] [ SQL ] SELECT MAX(create_time) AS tp_max FROM `think_visitinfo` LIMIT 1 [ RunTime:0.000592s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_visitinfo` LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT SUM(pvs) AS tp_sum FROM `think_visitinfo` LIMIT 1 [ RunTime:0.000304s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_visithistory` [ RunTime:0.010068s ]
+[ sql ] [ SQL ] INSERT INTO `think_visithistory` (`user` , `pv` , `create_time` , `update_time`) VALUES (1 , 38 , '1527944834' , '1527944834') [ RunTime:0.002083s ]
+[ sql ] [ SQL ] SELECT `id` FROM `think_visitinfo` [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT * FROM `think_visitinfo` WHERE  `id` IN (12) [ RunTime:0.000417s ]
+[ sql ] [ SQL ] DELETE FROM `think_visitinfo`    WHERE  `id` = 12 [ RunTime:0.002203s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_visithistory` LIMIT 1 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT * FROM `think_visitinfo` WHERE  `uip` = '0.0.0.0' LIMIT 1 [ RunTime:0.000399s ]
+[ sql ] [ SQL ] INSERT INTO `think_visitinfo` (`uip` , `pvs` , `ti` , `create_time` , `update_time`) VALUES ('0.0.0.0' , 1 , '2018-06-02' , '1527944834' , '1527944834') [ RunTime:0.001797s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_pictxtmng` [ RunTime:0.011443s ]
+[ sql ] [ SQL ] SELECT * FROM `think_pictxtmng` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000620s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_team` [ RunTime:0.011195s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_team` WHERE  `type` = 0 LIMIT 1 [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SELECT * FROM `think_team` WHERE  `type` = 0 ORDER BY `ppid`  ASC LIMIT 0,15 [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_team` WHERE  `type` = 1 LIMIT 1 [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT * FROM `think_team` WHERE  `type` = 1 ORDER BY `ppid`  ASC LIMIT 0,15 [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_baseinfo` [ RunTime:0.011203s ]
+[ sql ] [ SQL ] SELECT * FROM `think_baseinfo` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000385s ]
+---------------------------------------------------------------
+[ 2018-06-02T21:09:40+08:00 ] 0.0.0.0 GET /home/faq.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011507s ] mysql:host=127.0.0.1;dbname=biteofworld;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_visitinfo` [ RunTime:0.008387s ]
+[ sql ] [ SQL ] SELECT MAX(create_time) AS tp_max FROM `think_visitinfo` LIMIT 1 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT * FROM `think_visitinfo` WHERE  `uip` = '0.0.0.0' LIMIT 1 [ RunTime:0.000370s ]
+[ sql ] [ SQL ] UPDATE `think_visitinfo`  SET `pvs`=2,`update_time`='1527944979'  WHERE  `id` = 13 [ RunTime:0.012805s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_faqcell` [ RunTime:0.009881s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_faqcell` WHERE  `status` = 1  AND `type` = 'bwc' LIMIT 1 [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SELECT * FROM `think_faqcell` WHERE  `status` = 1  AND `type` = 'bwc' ORDER BY `create_time`  ASC LIMIT 0,15 [ RunTime:0.000616s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_faqcell` WHERE  `status` = 1  AND `type` = 'product' LIMIT 1 [ RunTime:0.000608s ]
+[ sql ] [ SQL ] SELECT * FROM `think_faqcell` WHERE  `status` = 1  AND `type` = 'product' ORDER BY `create_time`  ASC LIMIT 0,15 [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_faqcell` WHERE  `status` = 1  AND `type` = 'support' LIMIT 1 [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT * FROM `think_faqcell` WHERE  `status` = 1  AND `type` = 'support' ORDER BY `create_time`  ASC LIMIT 0,15 [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_faqcell` WHERE  `status` = 1  AND `type` = 'others' LIMIT 1 [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SELECT * FROM `think_faqcell` WHERE  `status` = 1  AND `type` = 'others' ORDER BY `create_time`  ASC LIMIT 0,15 [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_baseinfo` [ RunTime:0.008947s ]
+[ sql ] [ SQL ] SELECT * FROM `think_baseinfo` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000405s ]
+---------------------------------------------------------------
+[ 2018-06-02T21:09:50+08:00 ] 0.0.0.0 GET /home/blog.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001315s ] mysql:host=127.0.0.1;dbname=biteofworld;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_visitinfo` [ RunTime:0.008221s ]
+[ sql ] [ SQL ] SELECT MAX(create_time) AS tp_max FROM `think_visitinfo` LIMIT 1 [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SELECT * FROM `think_visitinfo` WHERE  `uip` = '0.0.0.0' LIMIT 1 [ RunTime:0.000494s ]
+[ sql ] [ SQL ] UPDATE `think_visitinfo`  SET `pvs`=3,`update_time`='1527944990'  WHERE  `id` = 13 [ RunTime:0.012839s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_blog` [ RunTime:0.011073s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_blog` WHERE  `status` = 0 LIMIT 1 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SELECT * FROM `think_blog` WHERE  `status` = 0 ORDER BY `create_time`  ASC LIMIT 0,15 [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_blog` WHERE  `status` = 0 LIMIT 1 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SELECT * FROM `think_blog` WHERE  `status` = 0 ORDER BY `create_time`  ASC LIMIT 0,15 [ RunTime:0.000474s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_baseinfo` [ RunTime:0.008220s ]
+[ sql ] [ SQL ] SELECT * FROM `think_baseinfo` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000377s ]
+---------------------------------------------------------------
+[ 2018-06-02T21:09:54+08:00 ] 0.0.0.0 GET /home/blog/blogpost/id/1.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001347s ] mysql:host=127.0.0.1;dbname=biteofworld;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_blog` [ RunTime:0.008911s ]
+[ sql ] [ SQL ] SELECT * FROM `think_blog` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_baseinfo` [ RunTime:0.008157s ]
+[ sql ] [ SQL ] SELECT * FROM `think_baseinfo` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000444s ]
+---------------------------------------------------------------
+[ 2018-06-02T21:10:04+08:00 ] 0.0.0.0 GET /home/contact.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011549s ] mysql:host=127.0.0.1;dbname=biteofworld;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_visitinfo` [ RunTime:0.008188s ]
+[ sql ] [ SQL ] SELECT MAX(create_time) AS tp_max FROM `think_visitinfo` LIMIT 1 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT * FROM `think_visitinfo` WHERE  `uip` = '0.0.0.0' LIMIT 1 [ RunTime:0.000492s ]
+[ sql ] [ SQL ] UPDATE `think_visitinfo`  SET `pvs`=4,`update_time`='1527945004'  WHERE  `id` = 13 [ RunTime:0.013036s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_baseinfo` [ RunTime:0.008262s ]
+[ sql ] [ SQL ] SELECT * FROM `think_baseinfo` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000395s ]
+---------------------------------------------------------------
+[ 2018-06-02T21:10:14+08:00 ] 0.0.0.0 GET /home/contact.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011137s ] mysql:host=127.0.0.1;dbname=biteofworld;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_visitinfo` [ RunTime:0.008556s ]
+[ sql ] [ SQL ] SELECT MAX(create_time) AS tp_max FROM `think_visitinfo` LIMIT 1 [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SELECT * FROM `think_visitinfo` WHERE  `uip` = '0.0.0.0' LIMIT 1 [ RunTime:0.000403s ]
+[ sql ] [ SQL ] UPDATE `think_visitinfo`  SET `pvs`=5,`update_time`='1527945014'  WHERE  `id` = 13 [ RunTime:0.002086s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_baseinfo` [ RunTime:0.008332s ]
+[ sql ] [ SQL ] SELECT * FROM `think_baseinfo` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000400s ]
+---------------------------------------------------------------
+[ 2018-06-02T21:10:16+08:00 ] 0.0.0.0 GET /
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011300s ] mysql:host=127.0.0.1;dbname=biteofworld;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_visitinfo` [ RunTime:0.013798s ]
+[ sql ] [ SQL ] SELECT MAX(create_time) AS tp_max FROM `think_visitinfo` LIMIT 1 [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SELECT * FROM `think_visitinfo` WHERE  `uip` = '0.0.0.0' LIMIT 1 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] UPDATE `think_visitinfo`  SET `pvs`=6,`update_time`='1527945016'  WHERE  `id` = 13 [ RunTime:0.001968s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_pictxtmng` [ RunTime:0.008458s ]
+[ sql ] [ SQL ] SELECT * FROM `think_pictxtmng` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000641s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_team` [ RunTime:0.008153s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_team` WHERE  `type` = 0 LIMIT 1 [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SELECT * FROM `think_team` WHERE  `type` = 0 ORDER BY `ppid`  ASC LIMIT 0,15 [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_team` WHERE  `type` = 1 LIMIT 1 [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SELECT * FROM `think_team` WHERE  `type` = 1 ORDER BY `ppid`  ASC LIMIT 0,15 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_baseinfo` [ RunTime:0.008250s ]
+[ sql ] [ SQL ] SELECT * FROM `think_baseinfo` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000449s ]
+---------------------------------------------------------------
+[ 2018-06-02T21:11:36+08:00 ] 0.0.0.0 GET /
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010768s ] mysql:host=127.0.0.1;dbname=biteofworld;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_visitinfo` [ RunTime:0.008149s ]
+[ sql ] [ SQL ] SELECT MAX(create_time) AS tp_max FROM `think_visitinfo` LIMIT 1 [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT * FROM `think_visitinfo` WHERE  `uip` = '0.0.0.0' LIMIT 1 [ RunTime:0.000455s ]
+[ sql ] [ SQL ] UPDATE `think_visitinfo`  SET `pvs`=7,`update_time`='1527945096'  WHERE  `id` = 13 [ RunTime:0.012827s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_pictxtmng` [ RunTime:0.008105s ]
+[ sql ] [ SQL ] SELECT * FROM `think_pictxtmng` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000647s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_team` [ RunTime:0.008109s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_team` WHERE  `type` = 0 LIMIT 1 [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT * FROM `think_team` WHERE  `type` = 0 ORDER BY `ppid`  ASC LIMIT 0,15 [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_team` WHERE  `type` = 1 LIMIT 1 [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT * FROM `think_team` WHERE  `type` = 1 ORDER BY `ppid`  ASC LIMIT 0,15 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_baseinfo` [ RunTime:0.008180s ]
+[ sql ] [ SQL ] SELECT * FROM `think_baseinfo` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000320s ]
+---------------------------------------------------------------
+[ 2018-06-02T21:12:06+08:00 ] 0.0.0.0 POST /admin/login_action.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011114s ] mysql:host=127.0.0.1;dbname=biteofworld;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_administrator` [ RunTime:0.029974s ]
+[ sql ] [ SQL ] SELECT * FROM `think_administrator` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000605s ]
+[ sql ] [ SQL ] SELECT * FROM `think_administrator` WHERE  `username` = 'admin'  AND `password` = '0fdf6d8829854bedeaed992a6f3ad83a'  AND `status` = 1 LIMIT 1 [ RunTime:0.000592s ]
+---------------------------------------------------------------
+[ 2018-06-02T21:12:21+08:00 ] 0.0.0.0 GET /home/faq.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001284s ] mysql:host=127.0.0.1;dbname=biteofworld;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_visitinfo` [ RunTime:0.016128s ]
+[ sql ] [ SQL ] SELECT MAX(create_time) AS tp_max FROM `think_visitinfo` LIMIT 1 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT * FROM `think_visitinfo` WHERE  `uip` = '0.0.0.0' LIMIT 1 [ RunTime:0.000321s ]
+[ sql ] [ SQL ] UPDATE `think_visitinfo`  SET `pvs`=8,`update_time`='1527945141'  WHERE  `id` = 13 [ RunTime:0.012778s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_faqcell` [ RunTime:0.009353s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_faqcell` WHERE  `status` = 1  AND `type` = 'bwc' LIMIT 1 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT * FROM `think_faqcell` WHERE  `status` = 1  AND `type` = 'bwc' ORDER BY `create_time`  ASC LIMIT 0,15 [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_faqcell` WHERE  `status` = 1  AND `type` = 'product' LIMIT 1 [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT * FROM `think_faqcell` WHERE  `status` = 1  AND `type` = 'product' ORDER BY `create_time`  ASC LIMIT 0,15 [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_faqcell` WHERE  `status` = 1  AND `type` = 'support' LIMIT 1 [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SELECT * FROM `think_faqcell` WHERE  `status` = 1  AND `type` = 'support' ORDER BY `create_time`  ASC LIMIT 0,15 [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_faqcell` WHERE  `status` = 1  AND `type` = 'others' LIMIT 1 [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SELECT * FROM `think_faqcell` WHERE  `status` = 1  AND `type` = 'others' ORDER BY `create_time`  ASC LIMIT 0,15 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_baseinfo` [ RunTime:0.008453s ]
+[ sql ] [ SQL ] SELECT * FROM `think_baseinfo` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000393s ]
+---------------------------------------------------------------
+[ 2018-06-02T21:12:26+08:00 ] 0.0.0.0 POST /admin/login_action.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011430s ] mysql:host=127.0.0.1;dbname=biteofworld;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_administrator` [ RunTime:0.008267s ]
+[ sql ] [ SQL ] SELECT * FROM `think_administrator` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT * FROM `think_administrator` WHERE  `username` = 'admin'  AND `password` = '5248b6e929e09b6d8583046af3db2327'  AND `status` = 1 LIMIT 1 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] UPDATE `think_administrator`  SET `last_login_ip`='0.0.0.0',`last_login_time`=1527945146,`expire_time`=1527973946  WHERE  `username` = 'admin'  AND `password` = '5248b6e929e09b6d8583046af3db2327'  AND `status` = 1 [ RunTime:0.000466s ]
+---------------------------------------------------------------
+[ 2018-06-02T21:12:29+08:00 ] 0.0.0.0 GET /admin
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011132s ] mysql:host=127.0.0.1;dbname=biteofworld;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_administrator` [ RunTime:0.008408s ]
+[ sql ] [ SQL ] SELECT * FROM `think_administrator` WHERE  `username` = 'admin'  AND `password` = '5248b6e929e09b6d8583046af3db2327'  AND `status` = 1 LIMIT 1 [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SELECT * FROM `think_administrator` WHERE  `username` = 'admin'  AND `password` = '5248b6e929e09b6d8583046af3db2327'  AND `status` = 1 LIMIT 1 [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_administrator` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_contactinfo` [ RunTime:0.011256s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_contactinfo` WHERE  `status` = 0 LIMIT 1 [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_faqcell` [ RunTime:0.008044s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_faqcell` WHERE  `status` = 0 LIMIT 1 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_subscribe` [ RunTime:0.009198s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_subscribe` WHERE  `status` = 0 LIMIT 1 [ RunTime:0.000496s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_contactinfo` WHERE  `status` = 0 LIMIT 1 [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_faqcell` WHERE  `status` = 0 LIMIT 1 [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_subscribe` WHERE  `status` = 0 LIMIT 1 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_blog` [ RunTime:0.008164s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_blog` LIMIT 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_visitinfo` [ RunTime:0.008079s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_visitinfo` LIMIT 1 [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SELECT SUM(pvs) AS tp_sum FROM `think_visitinfo` LIMIT 1 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT MAX(create_time) AS tp_max FROM `think_visitinfo` LIMIT 1 [ RunTime:0.000360s ]
+---------------------------------------------------------------
+[ 2018-06-02T21:12:56+08:00 ] 0.0.0.0 GET /admin/baseinfomanage.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001240s ] mysql:host=127.0.0.1;dbname=biteofworld;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_administrator` [ RunTime:0.008442s ]
+[ sql ] [ SQL ] SELECT * FROM `think_administrator` WHERE  `username` = 'admin'  AND `password` = '5248b6e929e09b6d8583046af3db2327'  AND `status` = 1 LIMIT 1 [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SELECT * FROM `think_administrator` WHERE  `username` = 'admin'  AND `password` = '5248b6e929e09b6d8583046af3db2327'  AND `status` = 1 LIMIT 1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_baseinfo` [ RunTime:0.007933s ]
+[ sql ] [ SQL ] SELECT * FROM `think_baseinfo` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000354s ]
+---------------------------------------------------------------
+[ 2018-06-02T21:13:27+08:00 ] 0.0.0.0 POST /admin/baseinfomanage/update_info.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001302s ] mysql:host=127.0.0.1;dbname=biteofworld;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_administrator` [ RunTime:0.008922s ]
+[ sql ] [ SQL ] SELECT * FROM `think_administrator` WHERE  `username` = 'admin'  AND `password` = '5248b6e929e09b6d8583046af3db2327'  AND `status` = 1 LIMIT 1 [ RunTime:0.000506s ]
+[ sql ] [ SQL ] SELECT * FROM `think_administrator` WHERE  `username` = 'admin'  AND `password` = '5248b6e929e09b6d8583046af3db2327'  AND `status` = 1 LIMIT 1 [ RunTime:0.000506s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_baseinfo` [ RunTime:0.008465s ]
+[ sql ] [ SQL ] UPDATE `think_baseinfo`  SET `address`='One infinity loop, 54100',`cellphone`='+86 13122391922',`telephone`='+00 1234567891',`email`='info@bwc.com',`qqnum`='123456789',`update_time`='1527945207'  WHERE  `id` = 1 [ RunTime:0.012943s ]
+---------------------------------------------------------------
+[ 2018-06-02T21:13:30+08:00 ] 0.0.0.0 GET /admin/baseinfomanage/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011348s ] mysql:host=127.0.0.1;dbname=biteofworld;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_administrator` [ RunTime:0.008189s ]
+[ sql ] [ SQL ] SELECT * FROM `think_administrator` WHERE  `username` = 'admin'  AND `password` = '5248b6e929e09b6d8583046af3db2327'  AND `status` = 1 LIMIT 1 [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT * FROM `think_administrator` WHERE  `username` = 'admin'  AND `password` = '5248b6e929e09b6d8583046af3db2327'  AND `status` = 1 LIMIT 1 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_baseinfo` [ RunTime:0.007693s ]
+[ sql ] [ SQL ] SELECT * FROM `think_baseinfo` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000463s ]
+---------------------------------------------------------------
+[ 2018-06-02T21:13:32+08:00 ] 0.0.0.0 GET /admin/baseinfomanage/whitepaper.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001372s ] mysql:host=127.0.0.1;dbname=biteofworld;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_administrator` [ RunTime:0.008395s ]
+[ sql ] [ SQL ] SELECT * FROM `think_administrator` WHERE  `username` = 'admin'  AND `password` = '5248b6e929e09b6d8583046af3db2327'  AND `status` = 1 LIMIT 1 [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT * FROM `think_administrator` WHERE  `username` = 'admin'  AND `password` = '5248b6e929e09b6d8583046af3db2327'  AND `status` = 1 LIMIT 1 [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_baseinfo` [ RunTime:0.008670s ]
+[ sql ] [ SQL ] SELECT * FROM `think_baseinfo` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000468s ]

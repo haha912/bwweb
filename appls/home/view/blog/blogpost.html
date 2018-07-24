@@ -1,0 +1,95 @@
+{layout name="layout" /}
+<!-- page-intro start-->
+<!-- ================ -->
+<div class="page-intro">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<ol class="breadcrumb">
+					<li><i class="fa fa-home pr-10"></i><a href="/">Home</a></li>
+					<li class="active">{:ldf('详情','Detail')}</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- page-intro end -->
+
+<!-- main-container start -->
+<!-- ================ -->
+<section class="main-container">
+
+	<div class="container">
+		<div class="row">
+
+			<!-- main start -->
+			<!-- ================ -->
+			<div class="main col-md-8">
+
+				<!-- page-title start -->
+				<!-- ================ -->
+				<h1 class="page-title">{:ldf($item['title'],$item['title_en'])}</h1>
+				<!-- page-title end -->
+
+				<!-- blogpost start -->
+				<article class="clearfix blogpost full">
+					<div class="blogpost-body">
+						<div class="side">
+							<div class="post-info">
+								<span class="day"><?php $tsplit = explode("-",$item['time']); echo $tsplit[2]; ?></span>
+								<?php  $mlist = array('JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUNE', 'JULY', 'AUG', 'SEPT', 'OCT', 'NOV', 'DEC'); ?>
+								<span class="month">{$mlist[(int)$tsplit[1]-1]} {$tsplit[0]}</span>
+							</div>
+							<div id="affix"><span class="share">Share This</span><div id="share"></div></div>
+						</div>
+						<div class="blogpost-content">
+							<header>
+								<div class="submitted"><i class="fa fa-user pr-5"></i> by <a href="#">{$item['author']}</a></div>
+							</header>
+							<div class="owl-carousel content-slider-with-controls">
+								<div class="overlay-container">
+									<img src="<?php echo str_replace('_thumb', '',$item['cover']); ?>" alt="">
+									<a href="<?php echo str_replace('_thumb', '',$item['cover']); ?>" class="popup-img overlay" title="image title"><i class="fa fa-search-plus"></i></a>
+								</div>
+							</div>
+							{:ldf($item['contents'],$item['contents_en'])}
+						</div>
+					</div>
+					<footer class="clearfix">
+						<ul class="links pull-left">
+							<?php $lsplit = explode("+",$item['labels']); ?>
+							<li><i class="fa fa-tags pr-5"></i> 
+								{foreach $lsplit as $lo} <a href="#">{$lo}. </a> {/foreach}
+							</li>
+						</ul>
+					</footer>
+				</article>
+				<!-- blogpost end -->					
+
+			</div>
+			<!-- main end -->
+
+			<!-- sidebar start -->
+			<aside class="col-md-3 col-md-offset-1">
+				<div class="sidebar">
+					<div class="block clearfix">
+						<h3 class="title">menu</h3>
+						<div class="separator"></div>
+						<nav>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="/">Home</a></li>
+								<li><a href="/#welcomeBW">{:ldf('关于我们','About us')}</a></li>
+								<li class="active"><a href="/blog.html">{:ldf('动态','Blogs')}</a></li>
+								<li><a href="/faq.html">FAQ</a></li>
+								<li><a href="page-contact.html">{:ldf('联系我们','Contact us')}</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</aside>
+			<!-- sidebar end -->
+
+		</div>
+	</div>
+</section>
+<!-- main-container end -->
